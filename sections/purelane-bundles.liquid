@@ -1,0 +1,738 @@
+<style>
+  #purelane-bundle-categories-{{ section.id }} {
+    --pb-ink: #17102b;
+    --pb-muted: #5d5775;
+    --pb-green: #4f7d10;
+    --pb-purple: #4b3a8f;
+    --pb-orange: #f0a03c;
+
+    width: 100%;
+    padding: 70px 20px 80px;
+    overflow: hidden;
+
+    background:
+      radial-gradient(
+        900px 500px at 50% 0%,
+        rgba(255,255,255,.55),
+        transparent 70%
+      ),
+      linear-gradient(
+        145deg,
+        #dff4e7 0%,
+        #cfeee0 48%,
+        #b9dfcd 100%
+      );
+  }
+
+  #purelane-bundle-categories-{{ section.id }} .pb-inner {
+    width: min(1240px, 100%);
+    margin: 0 auto;
+  }
+
+  /* ==============================
+     WHY BUNDLES
+  ============================== */
+
+  #purelane-bundle-categories-{{ section.id }} .pb-why {
+    padding: 34px 30px 38px;
+    margin-bottom: 76px;
+
+    border-radius: 28px;
+    border: 1px solid rgba(255,255,255,.7);
+
+    background:
+      linear-gradient(
+        145deg,
+        rgba(255,255,255,.62),
+        rgba(236,230,247,.25)
+      );
+
+    box-shadow:
+      0 24px 70px rgba(18,12,34,.10),
+      inset 0 1px 0 rgba(255,255,255,.75);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  #purelane-bundle-categories-{{ section.id }} .pb-why-title {
+    margin: 0 0 34px;
+
+    text-align: center;
+
+    color: var(--pb-ink);
+
+    font-family: Arial, sans-serif;
+    font-size: clamp(34px, 4.5vw, 58px);
+    font-weight: 900;
+    line-height: .98;
+    letter-spacing: -.055em;
+    text-transform: uppercase;
+  }
+
+  #purelane-bundle-categories-{{ section.id }} .pb-benefits {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+  }
+
+  #purelane-bundle-categories-{{ section.id }} .pb-benefit {
+    text-align: center;
+  }
+
+  #purelane-bundle-categories-{{ section.id }} .pb-benefit-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 16px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(75,58,143,.18);
+
+    background: rgba(255,255,255,.42);
+
+    color: var(--pb-green);
+  }
+
+  #purelane-bundle-categories-{{ section.id }} .pb-benefit-icon svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  #purelane-bundle-categories-{{ section.id }} .pb-benefit-title {
+    margin: 0 0 7px;
+
+    color: var(--pb-ink);
+
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+
+  #purelane-bundle-categories-{{ section.id }} .pb-benefit-text {
+    margin: 0;
+
+    color: var(--pb-muted);
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  /* ==============================
+     CATEGORY HEADER
+  ============================== */
+
+  #purelane-bundle-categories-{{ section.id }} .pb-heading {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  #purelane-bundle-categories-{{ section.id }} .pb-kicker {
+    display: block;
+    margin-bottom: 12px;
+
+    color: #77708e;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+  }
+
+  #purelane-bundle-categories-{{ section.id }} .pb-main-title {
+    margin: 0;
+
+    color: var(--pb-ink);
+
+    font-family: Arial, sans-serif;
+    font-size: clamp(38px, 5vw, 64px);
+    font-weight: 900;
+    line-height: .98;
+    letter-spacing: -.055em;
+    text-transform: uppercase;
+  }
+
+  #purelane-bundle-categories-{{ section.id }} .pb-rule {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+
+    max-width: 300px;
+    margin: 20px auto 0;
+  }
+
+  #purelane-bundle-categories-{{ section.id }} .pb-rule-line {
+    flex: 1;
+    height: 1px;
+    background: rgba(75,58,143,.18);
+  }
+
+  #purelane-bundle-categories-{{ section.id }} .pb-rule-leaf {
+    width: 16px;
+    height: 16px;
+    color: var(--pb-orange);
+  }
+
+  /* ==============================
+     CATEGORY GRID
+  ============================== */
+
+  #purelane-bundle-categories-{{ section.id }} .pb-categories {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+  }
+
+  /* Original .cat structure:
+     display:flex, column, hover lift
+  */
+
+  #purelane-bundle-categories-{{ section.id }} .pb-category {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+    overflow: hidden;
+
+    padding: 0;
+
+    border-radius: 24px;
+    border: 1px solid rgba(255,255,255,.72);
+
+    background:
+      linear-gradient(
+        145deg,
+        rgba(255,255,255,.70),
+        rgba(236,230,247,.28)
+      );
+
+    box-shadow:
+      0 24px 60px rgba(18,12,34,.10),
+      inset 0 1px 0 rgba(255,255,255,.72);
+
+    text-decoration: none;
+
+    transition:
+      transform .4s cubic-bezier(.2,.7,.2,1),
+      box-shadow .4s ease;
+  }
+
+  #purelane-bundle-categories-{{ section.id }} .pb-category:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+      0 32px 72px rgba(18,12,34,.15),
+      inset 0 1px 0 rgba(255,255,255,.8);
+  }
+
+  /* ==============================
+     PRODUCT IMAGE
+  ============================== */
+
+  #purelane-bundle-categories-{{ section.id }} .pb-category-image {
+    height: 194px;
+
+    position: relative;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    padding: 14px 12px 0;
+
+    overflow: hidden;
+
+    background:
+      linear-gradient(
+        145deg,
+        rgba(255,255,255,.35),
+        rgba(236,230,247,.20)
+      );
+  }
+
+  #purelane-bundle-categories-{{ section.id }} .pb-category-image::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+      radial-gradient(
+        110% 80% at 50% 6%,
+        rgba(236,230,247,.35),
+        rgba(75,58,143,.10) 56%,
+        transparent 78%
+      );
+  }
+
+  #purelane-bundle-categories-{{ section.id }} .pb-category-image img {
+    position: relative;
+    z-index: 1;
+
+    display: block;
+
+    width: auto;
+    max-width: 80%;
+
+    height: 178px;
+
+    object-fit: contain;
+
+    filter:
+      drop-shadow(0 12px 18px rgba(1,24,22,.18));
+  }
+
+  /* ==============================
+     CATEGORY TEXT
+  ============================== */
+
+  #purelane-bundle-categories-{{ section.id }} .pb-category-text {
+    padding: 14px 16px 18px;
+
+    border-top: 1px solid rgba(75,58,143,.10);
+  }
+
+  #purelane-bundle-categories-{{ section.id }} .pb-category-title {
+    margin: 0 0 6px;
+
+    color: var(--pb-ink);
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  #purelane-bundle-categories-{{ section.id }} .pb-category-description {
+    margin: 0;
+
+    color: var(--pb-muted);
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  /* ==============================
+     MOBILE
+  ============================== */
+
+  @media (max-width: 899px) {
+    #purelane-bundle-categories-{{ section.id }} .pb-benefits {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    #purelane-bundle-categories-{{ section.id }} .pb-categories {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    #purelane-bundle-categories-{{ section.id }} {
+      padding: 48px 14px 60px;
+    }
+
+    #purelane-bundle-categories-{{ section.id }} .pb-why {
+      padding: 28px 18px;
+      margin-bottom: 52px;
+    }
+
+    #purelane-bundle-categories-{{ section.id }} .pb-why-title {
+      font-size: 34px;
+    }
+
+    #purelane-bundle-categories-{{ section.id }} .pb-benefits {
+      grid-template-columns: 1fr 1fr;
+      gap: 24px 12px;
+    }
+
+    #purelane-bundle-categories-{{ section.id }} .pb-main-title {
+      font-size: 38px;
+    }
+
+    #purelane-bundle-categories-{{ section.id }} .pb-categories {
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    #purelane-bundle-categories-{{ section.id }} .pb-category-image {
+      height: 158px;
+    }
+
+    #purelane-bundle-categories-{{ section.id }} .pb-category-image img {
+      height: 142px;
+    }
+
+    #purelane-bundle-categories-{{ section.id }} .pb-category-text {
+      padding: 12px 12px 15px;
+    }
+
+    #purelane-bundle-categories-{{ section.id }} .pb-category-title {
+      font-size: 12px;
+    }
+
+    #purelane-bundle-categories-{{ section.id }} .pb-category-description {
+      font-size: 11px;
+    }
+  }
+</style>
+
+
+<section id="purelane-bundle-categories-{{ section.id }}">
+
+  <div class="pb-inner">
+
+    <!-- ==========================
+         WHY BUNDLES
+    =========================== -->
+
+    <div class="pb-why">
+
+      <h2 class="pb-why-title">
+        {{ section.settings.why_heading }}
+      </h2>
+
+      <div class="pb-benefits">
+
+        <div class="pb-benefit">
+
+          <div class="pb-benefit-icon">
+            <svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M12 3v18"></path>
+              <path d="M17 7.5c0-2-2-3.5-5-3.5S7 5.5 7 7.5s2 3 5 3 5 1 5 3.5S15 18 12 18s-5-1.5-5-3.5"></path>
+            </svg>
+          </div>
+
+          <h3 class="pb-benefit-title">
+            {{ section.settings.benefit_1_title }}
+          </h3>
+
+          <p class="pb-benefit-text">
+            {{ section.settings.benefit_1_text }}
+          </p>
+
+        </div>
+
+
+        <div class="pb-benefit">
+
+          <div class="pb-benefit-icon">
+            <svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect x="4" y="4" width="16" height="16" rx="3"></rect>
+              <path d="m8 12 2.5 2.5L16 9"></path>
+            </svg>
+          </div>
+
+          <h3 class="pb-benefit-title">
+            {{ section.settings.benefit_2_title }}
+          </h3>
+
+          <p class="pb-benefit-text">
+            {{ section.settings.benefit_2_text }}
+          </p>
+
+        </div>
+
+
+        <div class="pb-benefit">
+
+          <div class="pb-benefit-icon">
+            <svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M12 3l2.7 5.5 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1-4.4-4.3 6.1-.9Z"></path>
+            </svg>
+          </div>
+
+          <h3 class="pb-benefit-title">
+            {{ section.settings.benefit_3_title }}
+          </h3>
+
+          <p class="pb-benefit-text">
+            {{ section.settings.benefit_3_text }}
+          </p>
+
+        </div>
+
+
+        <div class="pb-benefit">
+
+          <div class="pb-benefit-icon">
+            <svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M3 7h11v10H3z"></path>
+              <path d="M14 10h4l3 3v4h-7z"></path>
+              <circle cx="7" cy="19" r="2"></circle>
+              <circle cx="18" cy="19" r="2"></circle>
+            </svg>
+          </div>
+
+          <h3 class="pb-benefit-title">
+            {{ section.settings.benefit_4_title }}
+          </h3>
+
+          <p class="pb-benefit-text">
+            {{ section.settings.benefit_4_text }}
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- ==========================
+         BUNDLE CATEGORIES
+    =========================== -->
+
+    <div class="pb-heading">
+
+      <span class="pb-kicker">
+        {{ section.settings.kicker }}
+      </span>
+
+      <h2 class="pb-main-title">
+        {{ section.settings.heading }}
+      </h2>
+
+      <div class="pb-rule" aria-hidden="true">
+
+        <span class="pb-rule-line"></span>
+
+        <svg
+          class="pb-rule-leaf"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M12 21c0-6.5 3.5-11 8-12.5C20 15 16.5 20 12 21Z"></path>
+          <path d="M12 21C12 14.5 8.5 10 4 8.5 4 15 7.5 20 12 21Z"></path>
+        </svg>
+
+        <span class="pb-rule-line"></span>
+
+      </div>
+
+    </div>
+
+
+    <div class="pb-categories">
+
+      {% for block in section.blocks %}
+
+        {% assign category_product = block.settings.product %}
+
+        <a
+          class="pb-category"
+          href="{{ block.settings.link | default: '/collections/all' }}"
+          {{ block.shopify_attributes }}
+        >
+
+          <span class="pb-category-image">
+
+            {% if category_product != blank and category_product.featured_image != blank %}
+
+              <img
+                src="{{ category_product.featured_image | image_url: width: 500 }}"
+                alt="{{ category_product.title | escape }}"
+                loading="lazy"
+                width="250"
+                height="300"
+              >
+
+            {% endif %}
+
+          </span>
+
+
+          <span class="pb-category-text">
+
+            <h3 class="pb-category-title">
+              {{ block.settings.title }}
+            </h3>
+
+            <p class="pb-category-description">
+              {{ block.settings.description }}
+            </p>
+
+          </span>
+
+        </a>
+
+      {% endfor %}
+
+    </div>
+
+  </div>
+
+</section>
+
+
+{% schema %}
+{
+  "name": "Purelane Bundles",
+  "settings": [
+    {
+      "type": "text",
+      "id": "why_heading",
+      "label": "Why bundles heading",
+      "default": "WHY BUNDLES BEAT BUYING SINGLE"
+    },
+    {
+      "type": "text",
+      "id": "benefit_1_title",
+      "label": "Benefit 1 title",
+      "default": "SAVE UP TO 45%"
+    },
+    {
+      "type": "text",
+      "id": "benefit_1_text",
+      "label": "Benefit 1 text",
+      "default": "Versus buying the same products separately"
+    },
+    {
+      "type": "text",
+      "id": "benefit_2_title",
+      "label": "Benefit 2 title",
+      "default": "ONE FLAT PRICE"
+    },
+    {
+      "type": "text",
+      "id": "benefit_2_text",
+      "label": "Benefit 2 text",
+      "default": "No calculators, no comparing carts"
+    },
+    {
+      "type": "text",
+      "id": "benefit_3_title",
+      "label": "Benefit 3 title",
+      "default": "CURATED BY EXPERTS"
+    },
+    {
+      "type": "text",
+      "id": "benefit_3_text",
+      "label": "Benefit 3 text",
+      "default": "Products picked to work well together"
+    },
+    {
+      "type": "text",
+      "id": "benefit_4_title",
+      "label": "Benefit 4 title",
+      "default": "FREE SHIPPING ALWAYS"
+    },
+    {
+      "type": "text",
+      "id": "benefit_4_text",
+      "label": "Benefit 4 text",
+      "default": "Included on every bundle, all India"
+    },
+    {
+      "type": "text",
+      "id": "kicker",
+      "label": "Category kicker",
+      "default": "BUNDLE CATEGORIES"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Category heading",
+      "default": "FIND THE RIGHT BUNDLE FOR YOU"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category",
+      "name": "Bundle category",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Kitchen bundle"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description",
+          "default": "Grease, dishes & more"
+        },
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 10,
+  "presets": [
+    {
+      "name": "Purelane Bundle Categories",
+      "blocks": [
+        {
+          "type": "category",
+          "settings": {
+            "title": "Kitchen bundle",
+            "description": "Grease, dishes & more"
+          }
+        },
+        {
+          "type": "category",
+          "settings": {
+            "title": "Bathroom bundle",
+            "description": "Deep clean & disinfect"
+          }
+        },
+        {
+          "type": "category",
+          "settings": {
+            "title": "Laundry bundle",
+            "description": "Softer, fresher wash"
+          }
+        },
+        {
+          "type": "category",
+          "settings": {
+            "title": "Hard water bundle",
+            "description": "Melt away limescale"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,753 @@
+<section
+  class="purelane-reviews"
+  id="PurelaneReviews-{{ section.id }}"
+>
+  <div class="purelane-reviews__inner">
+
+    <div class="purelane-reviews__header">
+
+      <div class="purelane-reviews__kicker">
+        {{ section.settings.kicker }}
+      </div>
+
+      <div class="purelane-reviews__summary">
+
+        <span
+          class="purelane-reviews__stars"
+          aria-label="5 out of 5 stars"
+        >
+          ★★★★★
+        </span>
+
+        <strong class="purelane-reviews__rating">
+          {{ section.settings.rating }}
+        </strong>
+
+        <span class="purelane-reviews__count">
+          {{ section.settings.review_count }}
+        </span>
+
+        <span class="purelane-reviews__homes">
+          Loved by <strong>12 lakh+</strong> homes
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <div
+      class="purelane-reviews__rail"
+      aria-label="Customer reviews"
+    >
+
+      <div class="purelane-reviews__track">
+
+        {% for block in section.blocks %}
+
+          <article
+            class="purelane-review-card"
+            {{ block.shopify_attributes }}
+          >
+
+            <div class="purelane-review-card__stars">
+              ★★★★★
+            </div>
+
+            <h3>
+              {{ block.settings.title }}
+            </h3>
+
+            <p>
+              {{ block.settings.text }}
+            </p>
+
+            <div class="purelane-review-card__author">
+
+              <span class="purelane-review-card__check">
+                ✓
+              </span>
+
+              <strong>
+                {{ block.settings.author }}
+              </strong>
+
+              <span>
+                · {{ block.settings.product }}
+              </span>
+
+            </div>
+
+          </article>
+
+        {% endfor %}
+
+
+        {% for block in section.blocks %}
+
+          <article
+            class="purelane-review-card"
+            aria-hidden="true"
+          >
+
+            <div class="purelane-review-card__stars">
+              ★★★★★
+            </div>
+
+            <h3>
+              {{ block.settings.title }}
+            </h3>
+
+            <p>
+              {{ block.settings.text }}
+            </p>
+
+            <div class="purelane-review-card__author">
+
+              <span class="purelane-review-card__check">
+                ✓
+              </span>
+
+              <strong>
+                {{ block.settings.author }}
+              </strong>
+
+              <span>
+                · {{ block.settings.product }}
+              </span>
+
+            </div>
+
+          </article>
+
+        {% endfor %}
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<style>
+
+  #PurelaneReviews-{{ section.id }} {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    padding: 34px 0 42px;
+
+    background:
+      linear-gradient(
+        180deg,
+        rgba(224,248,232,.70),
+        rgba(205,239,218,.86)
+      );
+  }
+
+
+  #PurelaneReviews-{{ section.id }} .purelane-reviews__inner {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+
+  /* HEADER */
+
+  #PurelaneReviews-{{ section.id }} .purelane-reviews__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 8px 16px;
+
+    margin: 0 auto 20px;
+
+    padding: 0 18px;
+
+    text-align: center;
+  }
+
+
+  #PurelaneReviews-{{ section.id }} .purelane-reviews__kicker {
+    color: #68627d;
+
+    font-family:
+      Arial,
+      Helvetica,
+      sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    line-height: 1;
+
+    letter-spacing: .18em;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+  }
+
+
+  /* SUMMARY */
+
+  #PurelaneReviews-{{ section.id }} .purelane-reviews__summary {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 6px 10px;
+
+    color: #514c68;
+
+    font-family:
+      Arial,
+      Helvetica,
+      sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: .10em;
+
+    text-transform: uppercase;
+  }
+
+
+  #PurelaneReviews-{{ section.id }} .purelane-reviews__stars {
+    color: #759d20;
+
+    font-size: 16px;
+
+    line-height: 1;
+
+    letter-spacing: .04em;
+
+    white-space: nowrap;
+  }
+
+
+  #PurelaneReviews-{{ section.id }} .purelane-reviews__rating {
+    color: #bd7419;
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    letter-spacing: 0;
+  }
+
+
+  #PurelaneReviews-{{ section.id }} .purelane-reviews__count {
+    color: #514c68;
+  }
+
+
+  /* 12 LAKH+ — ORANGE + BOLD */
+
+  #PurelaneReviews-{{ section.id }} .purelane-reviews__homes {
+    margin-left: 8px;
+
+    color: #514c68;
+  }
+
+
+  #PurelaneReviews-{{ section.id }} .purelane-reviews__homes strong {
+    color: #bd7419;
+
+    font-family:
+      Arial,
+      Helvetica,
+      sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 900;
+
+    letter-spacing: 0;
+  }
+
+
+  /* REVIEW RAIL */
+
+  #PurelaneReviews-{{ section.id }} .purelane-reviews__rail {
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    -webkit-mask-image:
+      linear-gradient(
+        90deg,
+        transparent 0%,
+        #000 7%,
+        #000 93%,
+        transparent 100%
+      );
+
+    mask-image:
+      linear-gradient(
+        90deg,
+        transparent 0%,
+        #000 7%,
+        #000 93%,
+        transparent 100%
+      );
+  }
+
+
+  /* AUTO SCROLL */
+
+  #PurelaneReviews-{{ section.id }} .purelane-reviews__track {
+    display: flex;
+
+    align-items: stretch;
+
+    gap: 12px;
+
+    width: max-content;
+
+    animation:
+      purelaneReviewsMarquee-{{ section.id }}
+      52s
+      linear
+      infinite;
+
+    will-change: transform;
+  }
+
+
+  #PurelaneReviews-{{ section.id }} .purelane-reviews__rail:hover
+  .purelane-reviews__track,
+
+  #PurelaneReviews-{{ section.id }} .purelane-reviews__rail:focus-within
+  .purelane-reviews__track {
+    animation-play-state: paused;
+  }
+
+
+  @keyframes purelaneReviewsMarquee-{{ section.id }} {
+
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+
+    to {
+      transform: translate3d(-50%, 0, 0);
+    }
+
+  }
+
+
+  /* CARD */
+
+  #PurelaneReviews-{{ section.id }} .purelane-review-card {
+    flex: 0 0 300px;
+
+    width: 300px;
+
+    min-height: 190px;
+
+    box-sizing: border-box;
+
+    padding: 18px 19px 16px;
+
+    border-radius: 18px;
+
+    background:
+      linear-gradient(
+        145deg,
+        rgba(255,255,255,.72),
+        rgba(241,249,245,.48)
+      );
+
+    border: 1px solid rgba(255,255,255,.78);
+
+    box-shadow:
+      0 10px 25px rgba(40,80,60,.055),
+      inset 0 1px 0 rgba(255,255,255,.85);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;
+  }
+
+
+  /* CARD STARS */
+
+  #PurelaneReviews-{{ section.id }} .purelane-review-card__stars {
+    margin-bottom: 10px;
+
+    color: #759d20;
+
+    font-size: 13px;
+
+    line-height: 1;
+
+    letter-spacing: .08em;
+  }
+
+
+  /* TITLE */
+
+  #PurelaneReviews-{{ section.id }} .purelane-review-card h3 {
+    margin: 0 0 8px;
+
+    color: #18132f;
+
+    font-family:
+      Arial,
+      Helvetica,
+      sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    line-height: 1.25;
+
+    letter-spacing: .035em;
+
+    text-transform: uppercase;
+  }
+
+
+  /* TEXT */
+
+  #PurelaneReviews-{{ section.id }} .purelane-review-card p {
+    margin: 0 0 12px;
+
+    color: #5b5770;
+
+    font-family:
+      Arial,
+      Helvetica,
+      sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 400;
+
+    line-height: 1.45;
+  }
+
+
+  /* AUTHOR */
+
+  #PurelaneReviews-{{ section.id }} .purelane-review-card__author {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 5px;
+
+    margin-top: auto;
+
+    padding-top: 10px;
+
+    color: #77738a;
+
+    font-family:
+      Arial,
+      Helvetica,
+      sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    letter-spacing: .10em;
+
+    text-transform: uppercase;
+  }
+
+
+  #PurelaneReviews-{{ section.id }} .purelane-review-card__author strong {
+    color: #075b51;
+
+    font-weight: 800;
+  }
+
+
+  #PurelaneReviews-{{ section.id }} .purelane-review-card__check {
+    color: #709a1f;
+
+    font-size: 13px;
+
+    font-weight: 900;
+  }
+
+
+  /* MOBILE */
+
+  @media (max-width: 760px) {
+
+    #PurelaneReviews-{{ section.id }} {
+      padding: 28px 0 32px;
+    }
+
+
+    #PurelaneReviews-{{ section.id }} .purelane-reviews__header {
+      gap: 8px;
+
+      margin-bottom: 16px;
+    }
+
+
+    #PurelaneReviews-{{ section.id }} .purelane-reviews__kicker {
+      font-size: 12px;
+
+      letter-spacing: .14em;
+    }
+
+
+    #PurelaneReviews-{{ section.id }} .purelane-reviews__summary {
+      font-size: 10px;
+
+      gap: 5px 7px;
+    }
+
+
+    #PurelaneReviews-{{ section.id }} .purelane-reviews__stars {
+      font-size: 13px;
+    }
+
+
+    #PurelaneReviews-{{ section.id }} .purelane-reviews__rating {
+      font-size: 13px;
+    }
+
+
+    #PurelaneReviews-{{ section.id }} .purelane-reviews__homes {
+      margin-left: 3px;
+    }
+
+
+    #PurelaneReviews-{{ section.id }} .purelane-reviews__homes strong {
+      font-size: 13px;
+    }
+
+
+    #PurelaneReviews-{{ section.id }} .purelane-reviews__track {
+      gap: 10px;
+
+      animation-duration: 40s;
+    }
+
+
+    #PurelaneReviews-{{ section.id }} .purelane-review-card {
+      flex-basis: 250px;
+
+      width: 250px;
+
+      min-height: 175px;
+
+      padding: 14px 15px;
+    }
+
+
+    #PurelaneReviews-{{ section.id }} .purelane-review-card__stars {
+      font-size: 11px;
+
+      margin-bottom: 8px;
+    }
+
+
+    #PurelaneReviews-{{ section.id }} .purelane-review-card h3 {
+      font-size: 12px;
+
+      margin-bottom: 7px;
+    }
+
+
+    #PurelaneReviews-{{ section.id }} .purelane-review-card p {
+      font-size: 12px;
+
+      line-height: 1.42;
+
+      margin-bottom: 9px;
+    }
+
+
+    #PurelaneReviews-{{ section.id }} .purelane-review-card__author {
+      font-size: 9px;
+
+      padding-top: 8px;
+    }
+
+  }
+
+
+  /* REDUCED MOTION */
+
+  @media (prefers-reduced-motion: reduce) {
+
+    #PurelaneReviews-{{ section.id }} .purelane-reviews__track {
+      animation: none;
+    }
+
+  }
+
+</style>
+
+
+{% schema %}
+
+{
+  "name": "Purelane Reviews",
+  "tag": "section",
+  "class": "purelane-reviews-section",
+
+  "settings": [
+
+    {
+      "type": "text",
+      "id": "kicker",
+      "label": "Kicker",
+      "default": "THAT'S WHAT THEY SAID"
+    },
+
+    {
+      "type": "text",
+      "id": "rating",
+      "label": "Rating",
+      "default": "4.8"
+    },
+
+    {
+      "type": "text",
+      "id": "review_count",
+      "label": "Review count",
+      "default": "FROM 8,000+ REVIEWS"
+    }
+
+  ],
+
+  "blocks": [
+
+    {
+      "type": "review",
+      "name": "Review",
+
+      "settings": [
+
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Review title",
+          "default": "Works like a charm"
+        },
+
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Review text",
+          "default": "Finally an eco option that cleans as well as the chemical detergent I used for years, and it smells better."
+        },
+
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Customer name",
+          "default": "Anita"
+        },
+
+        {
+          "type": "text",
+          "id": "product",
+          "label": "Product",
+          "default": "Laundry detergent"
+        }
+
+      ]
+
+    }
+
+  ],
+
+  "presets": [
+
+    {
+      "name": "Purelane Reviews",
+
+      "blocks": [
+
+        {
+          "type": "review",
+          "settings": {
+            "title": "Works like a charm",
+            "text": "Finally an eco option that cleans as well as the chemical detergent I used for years, and it smells better.",
+            "author": "Anita",
+            "product": "Laundry detergent"
+          }
+        },
+
+        {
+          "type": "review",
+          "settings": {
+            "title": "Best dishwash ever",
+            "text": "Our old dishwash left my hands with dry, cracked skin. That stopped completely after we switched.",
+            "author": "Priya",
+            "product": "Dishwash gel"
+          }
+        },
+
+        {
+          "type": "review",
+          "settings": {
+            "title": "Great product, great packaging",
+            "text": "Very soft on hands with a lovely fragrance, and it feels good to be using far less plastic.",
+            "author": "Sunita",
+            "product": "Liquid handwash"
+          }
+        },
+
+        {
+          "type": "review",
+          "settings": {
+            "title": "Dog friendly",
+            "text": "We switched because chemical floor cleaners were setting off my dog's allergies. No reactions since.",
+            "author": "Rohit S.",
+            "product": "Floor cleaner"
+          }
+        },
+
+        {
+          "type": "review",
+          "settings": {
+            "title": "Sparkling taps again",
+            "text": "Hard water had ruined our bathroom fittings. Two sprays and the scale wipes straight off, no scrubbing.",
+            "author": "Verified buyer",
+            "product": "Tap cleaner"
+          }
+        }
+
+      ]
+
+    }
+
+  ]
+
+}
+
+{% endschema %}

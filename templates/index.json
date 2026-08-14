@@ -1,0 +1,246 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "purelane_hero_ttTCPA": {
+      "type": "purelane-hero",
+      "name": "Purelane Hero",
+      "settings": {
+        "heading_line_1": "Clean",
+        "heading_line_2": "That",
+        "heading_line_3": "Lasts",
+        "description": "<p>Homecare that works on the toughest grime, made from plants. Kind to your home, your family and the world outside it.</p>",
+        "promise_1": "Plant powered",
+        "promise_2": "Safe for kids & pets",
+        "promise_3": "Zero harsh chemicals",
+        "primary_label": "Shop now",
+        "primary_link": "",
+        "secondary_label": "How it works",
+        "secondary_link": "",
+        "kitchen_product": "",
+        "tap_product": "",
+        "metal_product": "",
+        "offer_1_label": "Single bottle",
+        "offer_1_price": "₹200",
+        "offer_1_compare": "₹299",
+        "offer_1_badge": "33% off",
+        "offer_2_label": "Any 2 products",
+        "offer_2_price": "₹349",
+        "offer_2_compare": "₹598",
+        "offer_2_badge": "Save ₹249",
+        "offer_3_label": "Any 3 products",
+        "offer_3_price": "₹499",
+        "offer_3_compare": "₹897",
+        "offer_3_badge": "Save ₹398"
+      }
+    },
+    "purelane_reviews_wKXExa": {
+      "type": "purelane-reviews",
+      "blocks": {
+        "review_cJd3xE": {
+          "type": "review",
+          "settings": {
+            "title": "BEST DISHWASH EVER",
+            "text": "Finally an eco option that cleans as well as the chemical detergent I used for years, and it smells better.",
+            "author": "PRIYA",
+            "product": "DISHWASH GEL"
+          }
+        },
+        "review_PtJb7t": {
+          "type": "review",
+          "settings": {
+            "title": "GREAT PRODUCT, GREAT PACKAGING",
+            "text": "Finally an eco option that cleans as well as the chemical detergent I used for years, and it smells better.",
+            "author": "SUNITA",
+            "product": "LIQUID HANDWASH"
+          }
+        },
+        "review_9Q6kDP": {
+          "type": "review",
+          "settings": {
+            "title": "SPARKLING TAPS AGAIN",
+            "text": "Finally an eco option that cleans as well as the chemical detergent I used for years, and it smells better.",
+            "author": "VERIFIED BUYER",
+            "product": "TAP CLEANER"
+          }
+        },
+        "review_X6VmYt": {
+          "type": "review",
+          "settings": {
+            "title": "DOG FRIENDLY",
+            "text": "Finally an eco option that cleans as well as the chemical detergent I used for years, and it smells better.",
+            "author": "ROHIT S.",
+            "product": "FLOOR CLEANER"
+          }
+        },
+        "review_9jWhm8": {
+          "type": "review",
+          "settings": {
+            "title": "WORKS LIKE A CHARM",
+            "text": "Finally an eco option that cleans as well as the chemical detergent I used for years, and it smells better.",
+            "author": "ANITA",
+            "product": "LAUNDRY DETERGENT"
+          }
+        }
+      },
+      "block_order": [
+        "review_cJd3xE",
+        "review_PtJb7t",
+        "review_9Q6kDP",
+        "review_X6VmYt",
+        "review_9jWhm8"
+      ],
+      "name": "Purelane Reviews",
+      "settings": {
+        "kicker": "THAT'S WHAT THEY SAID",
+        "rating": "4.8",
+        "review_count": "FROM 8,000+ REVIEWS"
+      }
+    },
+    "purelane_combos_qFMimw": {
+      "type": "purelane-combos",
+      "blocks": {
+        "combo_mU8ze6": {
+          "type": "combo",
+          "settings": {
+            "title": "Kitchen essentials",
+            "product_1": "kitchen-cleaner-foaming",
+            "product_2": "dishwash-gel",
+            "product_3": "tap-cleaner-limescale-remover",
+            "description": "A simple combination for everyday cleaning.",
+            "combo_price": 499,
+            "savings_label": "YOU SAVE ₹398",
+            "featured": false,
+            "featured_label": "MOST POPULAR",
+            "button_label": "SHOP COMBO",
+            "button_link": ""
+          }
+        },
+        "combo_34kfkw": {
+          "type": "combo",
+          "settings": {
+            "title": "Bathroom deep clean",
+            "product_1": "toilet-cleaner",
+            "product_2": "tap-cleaner-limescale-remover",
+            "product_3": "magic-eraser",
+            "description": "A simple combination for everyday cleaning.",
+            "combo_price": 499,
+            "savings_label": "YOU SAVE ₹398",
+            "featured": false,
+            "featured_label": "MOST POPULAR",
+            "button_label": "SHOP COMBO",
+            "button_link": ""
+          }
+        },
+        "combo_BpJTgq": {
+          "type": "combo",
+          "settings": {
+            "title": "Complete home",
+            "product_1": "kitchen-cleaner-foaming",
+            "product_2": "laundry-detergent",
+            "product_3": "floor-cleaner",
+            "description": "A simple combination for everyday cleaning.",
+            "combo_price": 799,
+            "savings_label": "YOU SAVE ₹398",
+            "featured": false,
+            "featured_label": "MOST POPULAR",
+            "button_label": "SHOP COMBO",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "combo_mU8ze6",
+        "combo_34kfkw",
+        "combo_BpJTgq"
+      ],
+      "name": "Purelane Combos",
+      "settings": {}
+    },
+    "purelane_product_grid_gWfrVF": {
+      "type": "purelane-product-grid",
+      "name": "Purelane Shop",
+      "settings": {
+        "kicker": "Bestsellers",
+        "heading": "Loved by 30,000 homes",
+        "collection": "purelane-bestsellers",
+        "products_to_show": 8
+      }
+    },
+    "purelane_bundles_YpWYjd": {
+      "type": "purelane-bundles",
+      "blocks": {
+        "category_fzCfYA": {
+          "type": "category",
+          "settings": {
+            "title": "Hard water bundle",
+            "description": "Melt away limescale",
+            "product": "fabric-conditioner",
+            "link": ""
+          }
+        },
+        "category_JpgWqM": {
+          "type": "category",
+          "settings": {
+            "title": "Laundry bundle",
+            "description": "Softer, fresher wash",
+            "product": "laundry-detergent",
+            "link": ""
+          }
+        },
+        "category_yKCkaR": {
+          "type": "category",
+          "settings": {
+            "title": "Bathroom Bundle",
+            "description": "Deep Clean and Disinfect",
+            "product": "toilet-cleaner",
+            "link": ""
+          }
+        },
+        "category_fxbYTe": {
+          "type": "category",
+          "settings": {
+            "title": "Kitchen bundle",
+            "description": "Grease, dishes & more",
+            "product": "machine-cleaner-powder",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "category_fzCfYA",
+        "category_JpgWqM",
+        "category_yKCkaR",
+        "category_fxbYTe"
+      ],
+      "name": "Purelane Bundles",
+      "settings": {
+        "why_heading": "WHY BUNDLES BEAT BUYING SINGLE",
+        "benefit_1_title": "SAVE UP TO 45%",
+        "benefit_1_text": "Versus buying the same products separately",
+        "benefit_2_title": "ONE FLAT PRICE",
+        "benefit_2_text": "No calculators, no comparing carts",
+        "benefit_3_title": "CURATED BY EXPERTS",
+        "benefit_3_text": "Products picked to work well together",
+        "benefit_4_title": "FREE SHIPPING ALWAYS",
+        "benefit_4_text": "Included on every bundle, all India",
+        "kicker": "BUILD YOUR BUNDLE",
+        "heading": "One box. Every room."
+      }
+    }
+  },
+  "order": [
+    "purelane_hero_ttTCPA",
+    "purelane_reviews_wKXExa",
+    "purelane_combos_qFMimw",
+    "purelane_product_grid_gWfrVF",
+    "purelane_bundles_YpWYjd"
+  ]
+}
